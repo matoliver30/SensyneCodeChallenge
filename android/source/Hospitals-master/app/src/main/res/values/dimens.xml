@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="noSpace">0dp</dimen>
+    <dimen name="spaceMini">4dp</dimen>
+    <dimen name="spaceSmall">8dp</dimen>
+    <dimen name="spaceRegular">16dp</dimen>
+
+    <dimen name="fontRegular">14sp</dimen>
+    <dimen name="fontMedium">16sp</dimen>
+    <dimen name="fontLarge">18sp</dimen>
+
+</resources>

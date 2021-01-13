@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.sensynehealth.hospitals.R" />
+
+        <variable
+            name="item"
+            type="com.sensynehealth.hospitals.data.model.Hospital" />
+
+        <variable
+            name="listener"
+            type="com.sensynehealth.hospitals.ui.list.HospitalSelectionListener" />
+    </data>
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{()->listener.onHospitalSelected(item)}"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/spaceRegular"
+        android:paddingTop="@dimen/spaceSmall"
+        android:paddingEnd="@dimen/spaceRegular"
+        android:paddingBottom="@dimen/spaceSmall">
+
+        <TextView
+            android:id="@+id/hospitalName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{item.organizationName}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/fontLarge"
+            tools:text="Hospital Name" />
+
+        <TextView
+            android:id="@+id/hospitalType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spaceMini"
+            android:text="@{item.subtype}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/fontRegular"
+            android:textStyle="italic"
+            tools:text="Mental Health Hospital" />
+
+    </LinearLayout>
+
+</layout>
